@@ -26,7 +26,7 @@ function App() {
   }
   return (
     <div className="App">
-      <button onClick={() => shareImage()}>Share</button>
+      {/* <button onClick={() => shareImage()}>Share</button> */}
  <div
                                 id="carouselExampleCaptions"
                                 className="carousel carousel-dark slide"
@@ -44,15 +44,15 @@ function App() {
 
                                 <div className="carousel-inner" id="d1">
                                     <div className="carousel-item active" id="slidedata">
-                                       <img src="https://consappsrvr.irevo.in/images/store_setup/welcome_banner_delivery.png" alt="im" width="100%" height="650px" id="s1"/>
+                                       <img src="https://consappsrvr.irevo.in/images/party_logo/default_logo.png" alt="im" width="100%" height="650px" id="s1"/>
                                     </div>
 
                                     <div className="carousel-item" id="slidedata">
-                                         <img src="https://consappsrvr.irevo.in/images/store_setup/welcome_banner_delivery.png" alt="im" width="100%" height="650px" id="s2"/>
+                                         <img src="https://consappsrvr.irevo.in/images/store_image/default_1.jpg" alt="im" width="100%" height="650px" id="s2"/>
                                     </div>
 
                                     <div className="carousel-item" id="slidedata">
-                                       <img src="https://consappsrvr.irevo.in/images/store_setup/welcome_banner_delivery.png" alt="im" width="100%" height="650px" id="s3"/>
+                                       <img src="https://consappsrvr.irevo.in/images/upi_qrcode/10000000087343/2577645936986148.jpg" alt="im" width="100%" height="650px" id="s3"/>
                                     </div>
 
                                     <div className="carousel-item" id="slidedata">
@@ -64,7 +64,7 @@ function App() {
                                     </div>
 
                                     <div className="carousel-item" id="slidedata">
-                                         <img src="https://consappsrvr.irevo.in/images/store_setup/welcome_banner_delivery.png" alt="im" width="100%" height="650px" id="s6"/>
+                                         <img src="https://consappsrvr.irevo.in/images/store_image/default_1.jpg" alt="im" width="100%" height="650px" id="s6"/>
                                     </div>
                                 </div>
 
