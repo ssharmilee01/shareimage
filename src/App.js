@@ -26,12 +26,15 @@ function App() {
   }
     
     const shareText = () => {
- try {
-                     navigator.share({
-                        title: "iRevo App Simulator",
-                        text: 'Check out iRevo App Simulator',
-                        // url: 'https://simulator.irevo.in/',
-                         });
+        try {
+     
+              let shareData = {
+        title: 'MDN',
+        text: 'Learn web development on MDN!',
+        url: '',
+              }
+            
+                     navigator.share(shareData);
                 } catch (err) {
                     console.error("Share failed:", err.message);
                 }
