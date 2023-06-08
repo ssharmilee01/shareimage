@@ -31,7 +31,7 @@ function App() {
               let shareData = {
         title: 'MDN',
         text: 'Learn web development on MDN!',
-        url: '',
+        url: 'https://nextjs.org/docs/getting-started/installation',
               }
             
                      navigator.share(shareData);
