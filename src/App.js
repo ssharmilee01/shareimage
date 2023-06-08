@@ -24,9 +24,21 @@ function App() {
   });
    
   }
+    
+    const shareText = () => {
+ try {
+                     navigator.share({
+                        title: "iRevo App Simulator",
+                        text: 'Check out iRevo App Simulator',
+                        url: 'https://simulator.irevo.in/',
+                         });
+                } catch (err) {
+                    console.error("Share failed:", err.message);
+                }
+    }
   return (
     <div className="App">
-      {/* <button onClick={() => shareImage()}>Share</button> */}
+      <button onClick={() => shareText()}>Share text in firefox</button>
  <div
                                 id="carouselExampleCaptions"
                                 className="carousel carousel-dark slide"
