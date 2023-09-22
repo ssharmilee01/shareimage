@@ -133,8 +133,8 @@ var myimg = node.getElementsByTagName('img')[0];
         try {
                      navigator.share({
                         title: "iRevo App Simulator",
-                        text: 'Check out iRevo App Simulator',
-                        url: 'Check out iRevo App Simulator : https://simulator.irevo.in/',
+                        // text: 'Check out iRevo App Simulator',
+                        // url: "Check out iRevo App Simulator : "+'https://simulator.irevo.in/',
                         files: [file]
                     });
                 } catch (err) {
