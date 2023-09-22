@@ -109,7 +109,7 @@ function App() {
                                     className="btn btn-primary"
                                     onClick={() => handleImage()}
                                 >
-                                    Share Image
+                                    Share Image 1
                                 </a>
                             </div>
     </div>
