@@ -131,11 +131,11 @@ var myimg = node.getElementsByTagName('img')[0];
                         const file = new File([blob], 'fileName.png', { type: blob.type });
 
         try {
-                     navigator.share({
+            navigator.share({
+                        files: [file],
                         title: "iRevo App Simulator",
                         // text: 'Check out iRevo App Simulator',
                         // url: "Check out iRevo App Simulator : "+'https://simulator.irevo.in/',
-                        files: [file]
                     });
                 } catch (err) {
                     console.error("Share failed:", err.message);
