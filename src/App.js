@@ -109,7 +109,7 @@ function App() {
                                     className="btn btn-primary"
                                     onClick={() => handleImage()}
                                 >
-                                    Share
+                                    Share Image
                                 </a>
                             </div>
     </div>
@@ -132,9 +132,9 @@ var myimg = node.getElementsByTagName('img')[0];
 
         try {
                      navigator.share({
-                        // title: "iRevo App Simulator",
+                        title: "iRevo App Simulator",
                         text: 'Check out iRevo App Simulator',
-                        // url: 'https://simulator.irevo.in/',
+                        url: 'https://simulator.irevo.in/',
                         files: [file]
                     });
                 } catch (err) {
