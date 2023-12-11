@@ -1,44 +1,43 @@
-import './App.css';
+import "./App.css";
 
 function App() {
-  const shareImage = async() => {
+  const shareImage = async () => {
     //https://consappsrvr.irevo.in/images/store_setup/welcome_banner_delivery.png
 
-
-    fetch("https://consappsrvr.irevo.in/images/store_setup/welcome_banner_delivery.png")
-  .then(response => response.blob())
-      .then(blob => {
-    
-                        const file = new File([blob], 'fileName.png', { type: blob.type });
+    fetch(
+      "https://consappsrvr.irevo.in/images/store_setup/welcome_banner_delivery.png"
+    )
+      .then((response) => response.blob())
+      .then((blob) => {
+        const file = new File([blob], "fileName.png", { type: blob.type });
 
         try {
-                     navigator.share({
-                        title: "iRevo App Simulator",
-                        text: 'Check out iRevo App Simulator',
-                        url: 'https://simulator.irevo.in/',
-                        files: [file]
-                    });
-                } catch (err) {
-                    console.error("Share failed:", err.message);
-                }
-  });
-   
-  }
-    
-    const shareText = () => {
-        try {
-     
-              let shareData = {
-        title: 'MDN',
-        text: 'Learn web development on MDN!',
-        url: 'https://nextjs.org/docs/getting-started/installation',
-              }
-            
-                     navigator.share(shareData);
-                } catch (err) {
-                    console.error("Share failed:", err.message);
-                }
-    }
+          navigator.share({
+            title: "iRevo App Simulator",
+            text: "Check out iRevo App Simulator",
+            url: "https://simulator.irevo.in/",
+            files: [file],
+          });
+        } catch (err) {
+          console.error("Share failed:", err.message);
+        }
+      });
+  };
+
+  // const shareText = () => {
+  //     try {
+
+  //           let shareData = {
+  //     title: 'MDN',
+  //     text: 'Learn web development on MDN!',
+  //     url: 'https://nextjs.org/docs/getting-started/installation',
+  //           }
+
+  //                  navigator.share(shareData);
+  //             } catch (err) {
+  //                 console.error("Share failed:", err.message);
+  //             }
+  // }
   return (
     <div className="App">
       <button onClick={() => shareImage()}>Share text in firefox</button>
@@ -177,7 +176,7 @@ function App() {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
-      <div className="text-center mt-4 mb-3">
+      {/* <div className="text-center mt-4 mb-3">
         <a
           type="button"
           className="btn btn-primary"
@@ -185,40 +184,35 @@ function App() {
         >
           Share Image 1
         </a>
-      </div>
+      </div> */}
     </div>
   );
 }
 
-const handleImage = () => {
-  var node = document.getElementsByClassName('carousel-item active')[0];
-  
-var myimg = node.getElementsByTagName('img')[0];
-  var mysrc = myimg.src;
+// const handleImage = () => {
+//   var node = document.getElementsByClassName("carousel-item active")[0];
 
-    console.log('node ', node , mysrc);
+//   var myimg = node.getElementsByTagName("img")[0];
+//   var mysrc = myimg.src;
 
-  fetch(mysrc)
-  .then(response => response.blob())
-      .then(blob => {
-    
-                        const file = new File([blob], 'fileName.png', { type: blob.type });
+//   console.log("node ", node, mysrc);
 
-        try {
-            navigator.share({
-                        files: [file],
-                        title: "iRevo App Simulator",
-                        // text: 'Check out iRevo App Simulator',
-                        // url: "Check out iRevo App Simulator : "+'https://simulator.irevo.in/',
-                    });
-                } catch (err) {
-                    console.error("Share failed:", err.message);
-                }
-  });
+//   fetch(mysrc)
+//     .then((response) => response.blob())
+//     .then((blob) => {
+//       const file = new File([blob], "fileName.png", { type: blob.type });
 
- 
-     
-
-    }
+//       try {
+//         navigator.share({
+//           files: [file],
+//           title: "iRevo App Simulator",
+//           // text: 'Check out iRevo App Simulator',
+//           // url: "Check out iRevo App Simulator : "+'https://simulator.irevo.in/',
+//         });
+//       } catch (err) {
+//         console.error("Share failed:", err.message);
+//       }
+//     });
+// };
 
 export default App;
