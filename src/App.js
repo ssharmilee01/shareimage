@@ -14,7 +14,7 @@ function App() {
         try {
           navigator.share({
             title: "iRevo App Simulator",
-            text: "Check out iRevo App SimulatorLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse in est ante in nibh mauris cursus mattis.Sodales ut eu sem integer vitae justo efacilisis magna etiam tempor. Nunc aliquet bibes arcu bibendum at. Fermentum iaculis eu non diam. Amet aliquam id diam maecenas. Sit at volutpat diam ut.",
+            text: "Check out iRevo App Simulator",
             url: "https://simulator.irevo.in/",
             files: [file],
           });
