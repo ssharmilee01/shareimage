@@ -15,7 +15,7 @@ function App() {
           navigator.share({
             title: "iRevo App Simulator",
             text: "Check out iRevo App Simulator",
-            url: "https://simulator.irevo.in/",
+            url: "Check out iRevo App Simulator - https://simulator.irevo.in/",
             files: [file],
           });
         } catch (err) {
