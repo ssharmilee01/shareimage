@@ -11,23 +11,15 @@ function App() {
       .then((blob) => {
         const file = new File([blob], "fileName.png", { type: blob.type });
 
-        if (!navigator.canShare) {
-          console.log(`Your browser doesn't support the Web Share API.`);
-          return;
-        }
-        if (navigator.canShare({ file })) {
-          try {
-            navigator.share({
-              title: "iRevo App Simulator",
-              text: "iRevo App",
-              url: "https://simulator.irevo.in/",
-              files: [file],
-            });
-          } catch (err) {
-            console.error("Share failed:", err.message);
-          }
-        } else {
-          console.log("Your System doesnt support canshare");
+        try {
+          navigator.share({
+            title: "iRevo App Simulator",
+            text: "iRevo App",
+            url: "https://simulator.irevo.in/",
+            files: [file],
+          });
+        } catch (err) {
+          console.error("Share failed:", err.message);
         }
       });
   };
