@@ -1,7 +1,7 @@
 import "./App.css";
 
 function App() {
-  const shareImage = async () => {
+  const shareImageWithURLTitle = async () => {
     //https://consappsrvr.irevo.in/images/store_setup/welcome_banner_delivery.png
 
     fetch(
@@ -16,6 +16,26 @@ function App() {
             title: "iRevo App Simulator",
             text: "iRevo App",
             url: "https://simulator.irevo.in/",
+            files: [file],
+          });
+        } catch (err) {
+          console.error("Share failed:", err.message);
+        }
+      });
+  };
+
+  const shareImage = async () => {
+    //https://consappsrvr.irevo.in/images/store_setup/welcome_banner_delivery.png
+
+    fetch(
+      "https://consappsrvr.irevo.in/images/store_setup/welcome_banner_delivery.png"
+    )
+      .then((response) => response.blob())
+      .then((blob) => {
+        const file = new File([blob], "fileName.png", { type: blob.type });
+
+        try {
+          navigator.share({
             files: [file],
           });
         } catch (err) {
